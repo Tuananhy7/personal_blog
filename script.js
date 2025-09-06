@@ -1,4 +1,9 @@
+// // Gắn sự kiện click vào nút
+// document.getElementById("home-button").addEventListener("click", function() {
+//   alert("này này, bấm làm cái gì !!! 🚀✨🎉");
+// });
+
 // Gắn sự kiện click vào nút
-document.getElementById("hello-btn").addEventListener("click", function() {
-  alert("Xin chào! Bạn vừa chạm vào tôi rồi đấy!");
+document.getElementById("about-button").addEventListener("click", function() {
+  alert("này này, bị lừa rồi nhé  !!! 😜😜😜");
 });
