@@ -1,9 +1,17 @@
-// // Gắn sự kiện click vào nút
-// document.getElementById("home-button").addEventListener("click", function() {
-//   alert("này này, bấm làm cái gì !!! 🚀✨🎉");
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const siteNav = document.getElementById("site-nav");
 
-// Gắn sự kiện click vào nút
-document.getElementById("about-button").addEventListener("click", function() {
-  alert("này này, bị lừa rồi nhé  !!! 😜😜😜");
+  menuToggle.addEventListener("click", () => {
+    siteNav.classList.toggle("show");
+  });
+  
+  document.getElementById("common-button").addEventListener("click", function() {
+    alert("này này, bị lừa rồi nhé  !!! 😜😜😜");
+  });
+
+  document.getElementById("contact-button").addEventListener("click", function() {
+    alert("này này, bấm làm cái gì !!! 🚀✨🎉");
+  });
+
 });

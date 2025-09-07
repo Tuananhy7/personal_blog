@@ -7,11 +7,11 @@ body {
 /* Header */
 .site-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #0077cc;
-  border-bottom: 1px solid #ddd;
+  background-color: #0077ff;
+  color: white;
+  padding: 0.75rem 1rem;
 }
 
 .site-title {
@@ -20,22 +20,58 @@ body {
   font-size: 1.5rem;
 }
 
+/* NAVIGATION */
 .site-nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .site-nav a {
-  text-decoration: none;
   color: white;
-  font-weight: 500;
+  text-decoration: none;
 }
 
 .site-nav a:hover {
-  color: black;
+  text-decoration: underline;
+}
+
+/* NÚT MENU (ẨN TRÊN DESKTOP) */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE: Màn hình nhỏ */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0077ff;
+    width: 200px;
+    border-radius: 0 0 0 10px;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .site-nav.show {
+    display: block;
+  }
 }
 
 /* Main */
@@ -47,6 +83,7 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 button {
   background-color: #0077cc;
   color: white;
