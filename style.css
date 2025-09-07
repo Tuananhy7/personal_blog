@@ -5,20 +5,37 @@ body {
 }
 
 /* Header */
-header {
+.site-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
   background-color: #0077cc;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
-nav a {
+
+.site-title {
   color: white;
-  margin: 0 15px;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
   text-decoration: none;
-  font-weight: bold;
+  color: white;
+  font-weight: 500;
 }
-nav a:hover {
-  text-decoration: underline;
+
+.site-nav a:hover {
+  color: black;
 }
 
 /* Main */
