@@ -6,12 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
     siteNav.classList.toggle("show");
   });
   
-  document.getElementById("common-button").addEventListener("click", function() {
-    alert("này này, bị lừa rồi nhé  !!! 😜😜😜");
-  });
+  const commonBtn = document.getElementById("common-button");
+  if (commonBtn) {
+    commonBtn.addEventListener("click", function() {
+      alert("này này, bị lừa rồi nhé  !!! 😜😜😜");
+    });
+  } else {
+    console.warn('common-button not found on this page.');
+  }
 
-  document.getElementById("contact-button").addEventListener("click", function() {
-    alert("này này, bấm làm cái gì !!! 🚀✨🎉");
-  });
+  const contactBtn = document.getElementById("contact-button");
+  if (contactBtn) {
+    contactBtn.addEventListener("click", function() {
+      alert("này này, bấm làm cái gì !!! 🚀✨🎉");
+    });
+  } else {
+    console.warn('contact-button not found on this page.');
+  }
 
 });
