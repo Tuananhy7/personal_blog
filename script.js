@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactBtn = document.getElementById("contact-button");
   if (contactBtn) {
     contactBtn.addEventListener("click", function() {
-      alert("này này, bấm làm cái gì !!! 🚀✨🎉 aaa");
+      alert("này này, bấm làm cái gì !!! 🚀✨🎉");
     });
   } else {
     console.warn('contact-button not found on this page.');
