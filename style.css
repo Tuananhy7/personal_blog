@@ -7,35 +7,73 @@ body {
 /* Header */
 .site-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* center contents horizontally by default */
   align-items: center;
   background-color: #0077ff;
   color: white;
   padding: 0.75rem 1rem;
+  position: relative; /* allow absolute positioned mobile nav */
 }
 
 .site-title {
   color: white;
   margin: 0;
   font-size: 1.5rem;
+  position: absolute; /* keep title visually on the left while nav is centered */
+  left: 1rem;
 }
 
 /* NAVIGATION */
+.site-nav {
+  display: block;
+}
+
 .site-nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
   margin: 0;
   padding: 0;
+  justify-content: center; /* center the list items horizontally */
+  align-items: center;
 }
 
 .site-nav a {
   color: white;
   text-decoration: none;
+  position: relative;
 }
 
-.site-nav a:hover {
-  text-decoration: underline;
+.site-nav a:hover,
+.site-nav a:focus {
+  /* no immediate decoration; animation below handles the underline */
+  text-decoration: none;
+}
+
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* small gap from text */
+  height: 2px;
+  width: 0%;
+  /* orange gradient */
+  background: linear-gradient(90deg, #ff7a00, #ffae42);
+  transition: width 220ms ease-in-out;
+  border-radius: 2px;
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus::after {
+  width: 100%;
+}
+
+/* Slight lift on hover for a polished feel + orange color */
+.site-nav a:hover,
+.site-nav a:focus {
+  transform: translateY(-1px);
+  transition: transform 160ms ease;
+  color: #ff7a00; /* change link color on hover/focus */
 }
 
 /* NÚT MENU (ẨN TRÊN DESKTOP) */
@@ -46,6 +84,8 @@ body {
   border: none;
   color: white;
   cursor: pointer;
+  position: absolute;
+  right: 1rem; /* keep toggle on the right */
 }
 
 /* RESPONSIVE: Màn hình nhỏ */
